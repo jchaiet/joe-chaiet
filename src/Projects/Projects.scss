@@ -1,0 +1,54 @@
+.projects__container {
+  background-color: var(--light-grey);
+}
+
+.projects__content {
+  width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list__item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 1em auto;
+  width: 100%;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  h4 {
+    color: var(--light-blue);
+  }
+}
+
+.list__image-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item__image {
+  flex: 1;
+  min-width: 200px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  margin: 0.5em;
+}

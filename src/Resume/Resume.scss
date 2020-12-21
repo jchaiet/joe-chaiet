@@ -1,0 +1,76 @@
+.resume__container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+
+  h4 {
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--light-blue);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.resume__header {
+  display: flex;
+  align-items: center;
+
+  button {
+    color: var(--light-blue);
+    margin-left: 0.5em;
+    font-size: 27px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--dark-blue);
+    }
+  }
+}
+
+.resume__skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resume__item {
+  margin: 1.5em auto;
+}
+
+.skills__item {
+  flex: 0.3 0 200px;
+  margin-bottom: 1em;
+
+  p {
+    margin: 0
+  }
+}
+
+.item__title {
+  font-family: "Barlow-Bold";
+}
+
+.experience__list {
+  list-style: square;
+
+  li {
+    margin: 1em auto;
+  }
+}
+
+.experience__item {
+  &:not(:first-of-type) {
+    margin-top: 3em;
+  }
+}
+
+.resume__item--experience, .resume__item--profile {
+  margin-top: 0;
+}
+
+.resume__item--skills {
+  margin-bottom: 0.5em;
+}

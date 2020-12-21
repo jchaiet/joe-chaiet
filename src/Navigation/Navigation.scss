@@ -1,0 +1,53 @@
+@keyframes moveDown {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}
+
+.navigation__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  transition: height 0.3s ease-in-out;
+  padding: 0 1em;
+  background-color: var(--dark-blue);
+  z-index: 999;
+  
+  h2 {
+    color: var(--white);
+    margin: 0;  
+  }
+  flex: 0.6;
+}
+
+.navigation__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  //animation: moveDown 0.3s ease-in-out;  
+  height: 50px;
+}
+
+.navigation__links {
+  flex: 0.4;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 21px;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--light-blue)
+    }
+  }
+}
