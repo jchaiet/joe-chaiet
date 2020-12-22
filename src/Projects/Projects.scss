@@ -3,9 +3,8 @@
 }
 
 .projects__content {
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 1em;
 }
 
 .projects__list {
@@ -51,4 +50,10 @@
   justify-content: center;
   background-color: red;
   margin: 0.5em;
+}
+
+@media screen and (min-width: 300px) {
+  .projects__container {
+    padding: 1em 2em;
+  }
 }

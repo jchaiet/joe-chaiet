@@ -1,5 +1,5 @@
 .resume__container {
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1em;
 
@@ -73,4 +73,10 @@
 
 .resume__item--skills {
   margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 300px) {
+  .resume__container {
+    padding: 1em 2em;
+  }
 }

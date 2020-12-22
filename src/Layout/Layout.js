@@ -33,7 +33,7 @@ const Layout = () => {
 
     const el = link.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    window.scrollTo({top: el, behavior: 'smooth'})
+    window.scrollTo({top: el, behavior: 'smooth'});
   }
 
   return (
