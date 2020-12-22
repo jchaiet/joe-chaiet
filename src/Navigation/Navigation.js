@@ -25,6 +25,8 @@ const Navigation = (props) => {
   }
 
   const handleScroll = useCallback(() => {
+    closeMenu();
+    
     const offset = window.scrollY;
 
     if(offset > 50){

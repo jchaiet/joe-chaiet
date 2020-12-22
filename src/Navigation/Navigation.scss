@@ -78,6 +78,9 @@
   .navigation__container {
     display: flex;
     flex: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .navigation__toggle {
@@ -96,14 +99,14 @@
     top: 50px;
     left: 0;
     position: absolute;
-    background-color: red;
+    background-color: var(--light-grey);
     visibility: visible;
     display: flex;
     z-index: 9999;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
+    height: calc(100vh - 50px);
     width: 100%;
     transition-property: height;
     -moz-transition-duration: 0.7s;
@@ -119,6 +122,8 @@
 
     button {
       margin: 2em auto;
+      color: var(--light-blue);
+      font-size: 27px
     }
   }
 
@@ -127,15 +132,6 @@
     display: flex;
     flex-direction: column;
     height: 0;
-    transition-property: height;
-    -moz-transition-duration: 0.7s;
-      -webkit-transition-duration: 0.7s;
-      -o-transition-duration: 0.7s;
-      transition-duration: 0.7s;
-      -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
     button {
       padding: 0 0.5em;
