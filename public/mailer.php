@@ -9,6 +9,12 @@
 
   if(empty($_POST['name']) && empty($_POST['email'])) die();
 
+  $msg_content = '<h2>Contact Request Submitted</h2>
+  <h4>Name</h4><p>'.$name.'</p>
+  <h4>Email</h4><p>'.$email.'</p>
+  <h4>Subject</h4><p>'.$subject.'</p>
+  <h4>Message</h4><p>'.$message.'</p>';
+
   $request_body = json_decode('{
     "personalizations": [
       {
@@ -17,16 +23,16 @@
             "email": "jchaiet@hotmail.com"
           }
         ],
-        "subject": "test subject"
+        "subject": "New message from joechaiet.com"
       }
     ],
     "from": {
-      "email": "test@test.com"
+      "email": "joe@liquidpixelco.com"
     },
     "content": [
       {
         "type": "text/plain",
-        "value": "test"
+        "value": "'. $msg_content .'"
       }  
     ]
   }');
