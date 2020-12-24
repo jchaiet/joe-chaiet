@@ -1,5 +1,5 @@
 <?php 
-  require 'vendor/autoload.php';
+  require '../vendor/autoload.php';
   //
   header("Access-Control-Allow-Origin: *");
 
