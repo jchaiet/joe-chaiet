@@ -58,6 +58,7 @@ const Layout = () => {
         <div className={`popup__container popup__container--contact  ${showContactModal ? 'slideIn' : 'slideOut'}`}>
           <ContactModal 
             setShowContactModal={setShowContactModal}
+            showContactModal={showContactModal}
           />
         </div>
       </div>

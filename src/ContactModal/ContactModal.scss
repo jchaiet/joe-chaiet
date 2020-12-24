@@ -76,3 +76,40 @@ input[type=submit]{
     pointer-events: none;
   }
 }
+
+.send-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+  color: #118243;
+  margin-bottom: 2em;
+
+  p {
+    margin: 0;
+  }
+
+  svg {
+    font-size: 72px;
+    color: #118243;
+    margin-bottom: 0.1em;
+  }
+}
+
+.send-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+  border: 3px solid #a31c2a;
+  border-radius: 5px;
+  background-color: #e09da4;
+  color: #a31c2a;
+  margin-bottom: 2em;
+
+  p {
+    margin: 0;
+  }
+}
