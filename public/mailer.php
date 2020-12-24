@@ -6,11 +6,6 @@
   $rest_json = file_get_contents('php://input');
   $_POST = json_decode($rest_json, true);
 
-  echo $_POST['email'];
-  echo gettype($_POST);
-  echo gettype($_POST['email']);
-
-/*
   if(empty($_POST['name']) && empty($_POST['email'])) die();
 
   $request_body = json_decode('{
@@ -39,5 +34,5 @@
   $response = $sg->client->mail()->send()->post($request_body);
   echo $response->statusCode();
   echo $response->body();
-  echo $response->headers();*/
+  echo $response->headers();
 ?>
