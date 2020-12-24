@@ -17,16 +17,16 @@
             "email": "jchaiet@hotmail.com"
           }
         ],
-        "subject": '. $_POST['subject'] .'
+        "subject": "test subject"
       }
     ],
     "from": {
-      "email": '. $_POST['email'] .'
+      "email": "test@test.com"
     },
     "content": [
       {
         "type": "text/plain",
-        "value": '. $_POST['message'] .'
+        "value": "test"
       }  
     ]
   }');
