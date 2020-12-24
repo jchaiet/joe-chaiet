@@ -13,7 +13,9 @@
     "personalizations": [
       {
         "to": [
-          "email": "jchaiet@hotmail.com"
+          {
+            "email": "jchaiet@hotmail.com"
+          }
         ],
         "subject": '. $_POST['subject'] .'
       }
