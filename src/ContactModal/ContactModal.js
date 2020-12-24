@@ -51,6 +51,10 @@ export default function ContactModal(props) {
     })
     .then(result => {
       setEmailSent(result.data.sent);
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
     })
     .catch(err => {
       setError(err.message);
@@ -68,6 +72,9 @@ export default function ContactModal(props) {
         
       </div>
       <div className="modal__content modal__content--contact">
+        { emailSent && 
+          <p></p>
+        }
         <form onSubmit={handleSendEmail}>
           <input 
             type="text"
@@ -113,6 +120,7 @@ export default function ContactModal(props) {
             type="submit"
             className="btn btn--blue"
             value="Send it"
+            disabled={!name || !email || !subject || !message}
           />
         </form>
       </div>
