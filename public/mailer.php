@@ -1,6 +1,6 @@
 <?php 
   require '../vendor/autoload.php';
-  //
+  
   header("Access-Control-Allow-Origin: *");
 
   $rest_json = file_get_contents('php://input');
@@ -31,7 +31,7 @@
   $apiKey = getenv('SENDGRID_API_KEY');
   $sg = new \SendGrid($apiKey);
 
-  $response = $sg->client->mail()->send()->post($request_body);
+  $response = $sg->client->mail()->send()->post(json_encode($request_body));
   echo $response->statusCode();
   echo $response->body();
   echo $response->headers();
