@@ -5,7 +5,8 @@ import './Projects.scss';
 const Projects = forwardRef((props, ref) => {
   const projects = [
     {name: 'Noma', desc: 'Noma is a rental management application.', images: [1, 2, 3, 4], link: null},
-    {name: 'Chatter', desc: 'Chatter is a React chat application that uses Socket.io.', images: [1], link: null}
+    {name: 'Chatter', desc: 'Chatter is a React chat application that uses Socket.io.', images: [1], link: null},
+    {name: 'This website!', desc: 'Whoa! Appception! This page is a React app. Simpe but effective. It includes some basic PHP for the contact form.', images: [1], link: null}
   ];
 
   return (
