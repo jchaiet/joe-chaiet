@@ -29,6 +29,10 @@
   }');
 
   $apiKey = getenv('SENDGRID_API_KEY');
+
+  echo $apiKey;
+  echo gettype($apiKey);
+  
   $sg = new \SendGrid($apiKey);
 
   $response = $sg->client->mail()->send()->post($request_body);
