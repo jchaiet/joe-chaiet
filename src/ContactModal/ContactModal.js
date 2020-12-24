@@ -57,7 +57,7 @@ export default function ContactModal(props) {
       console.log(err.message);
     })
   }
-  
+
   return (
     <div className="modal modal--contact">
       <div className="modal__header modal__header--contact">
