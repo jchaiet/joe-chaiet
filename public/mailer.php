@@ -2,6 +2,7 @@
   require '../vendor/autoload.php';
   
   header("Access-Control-Allow-Origin: *");
+  header("Content-Type: application/json");
 
   $rest_json = file_get_contents('php://input');
   $_POST = json_decode($rest_json, true);
@@ -28,9 +29,7 @@
     ]
   }');
 
-  echo gettype($request_body);
-
-  $apiKey = getenv('SENDGRID_API_KEY');
+  $apiKey = trim(getenv('SENDGRID_API_KEY'));
   $sg = new \SendGrid($apiKey);
 
   $response = $sg->client->mail()->send()->post($request_body);
