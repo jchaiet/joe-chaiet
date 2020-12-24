@@ -1,4 +1,6 @@
 <?php 
+  require 'vendor/autoload.php';
+  //
   header("Access-Control-Allow-Origin: *");
 
   $rest_json = file_get_contents('php://input');
@@ -6,27 +8,31 @@
 
   if(empty($_POST['name']) && empty($_POST['email'])) die();
 
-  if($_POST){
-    //Set response code 200 Ok
-    http_response_code(200);
-    $subject = "New contact form sumission: ". $_POST['subject'];
-    $to = "jchaiet@hotmail.com";
-    $from = $_POST['email'];
+  $request_body = json_decode('{
+    "personalizations": [
+      {
+        "to": [
+          "email": "jchaiet@hotmail.com"
+        ],
+        "subject": '. $_POST['subject'] .'
+      }
+    ],
+    "from": {
+      "email": '. $_POST['email'] .'
+    },
+    "content": [
+      {
+        "type": "text/plain",
+        "value": '. $_POST['message'] .'
+      }  
+    ]
+  }');
 
-    //Data
-    $msg = $_POST['message'];
+  $apiKey = getenv('SENDGRID_API_KEY');
+  $sg = new \SendGrid($apiKey);
 
-    //Headers
-    $headers = "MIME-Version 1.0\r\n";
-    $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-    $headers .= "From <". $from .">";
-    mail($to, $subject, $msg, $headers);
-
-    echo json_encode(array(
-      "sent" => true
-    ));
-  }else{
-    //Return error
-    echo json_encode(["sent" => false, "message" => "Oop! There was an issue sending the email"]);
-  }
+  $response = $sg->client->mail()->send->post($request_body);
+  echo $response->statusCode();
+  echo $response->body();
+  echo $response->headers();
 ?>
