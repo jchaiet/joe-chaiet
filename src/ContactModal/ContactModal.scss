@@ -1,0 +1,72 @@
+.popup__container {
+  position: initial !important;
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.modal__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0;
+    border: none;
+    color: var(--red);
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+
+.modal__content {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+input[type=text], textarea {
+  font-family: "Barlow-Regular";
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 300px;
+  border: 2px solid var(--grey);
+  margin-bottom: 1em;
+  width: 100%;
+
+  &:focus {
+    border: 2px solid var(--primary-color);
+  }
+}
+
+textarea {
+  height: 75px;
+}
+
+input[type=submit]{
+  font-size: 21px;
+  min-width: 300px;
+  width: 100%;
+  flex: 1;
+}

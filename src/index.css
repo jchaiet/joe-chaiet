@@ -32,6 +32,10 @@
   --white: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -67,6 +71,17 @@ strong {
   font-family: 'Barlow-Bold';
 }
 
-button:focus {
+button:focus, input:focus, a:focus, textarea:focus {
   outline: none;
+}
+
+/* Buttons */
+.btn--blue {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.btn--blue:hover {
+  background-color: var(--blue);
+  transition: background-color 0.2s ease-in-out;
 }

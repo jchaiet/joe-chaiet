@@ -58,13 +58,3 @@
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
-
-.btn--blue {
-  background-color: var(--light-blue);
-  color: #fff;
-
-  &:hover {
-    background-color: var(--blue);
-    transition: background-color 0.2s ease-in-out;
-  }
-}

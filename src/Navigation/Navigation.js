@@ -10,6 +10,7 @@ const Navigation = (props) => {
     {display: 'About', value: 'about'},
     {display: 'Projects', value: 'projects'},
     {display: 'Resume', value: 'resume'},
+    {display: 'Contact', value: 'contact'}
   ];
 
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -26,7 +27,7 @@ const Navigation = (props) => {
 
   const handleScroll = useCallback(() => {
     closeMenu();
-    
+
     const offset = window.scrollY;
 
     if(offset > 50){
@@ -48,18 +49,20 @@ const Navigation = (props) => {
       <div className="navigation__logo">
         <h2>Joe Chaiet</h2>
       </div>
-      <div className="navigation__links-contain">
+      <div className="navigation__links links">
       
-        <span className={`navigation__links ${isMenuOpen ? 'navigation__links--open': 'navigation__links--closed'}`}>
-          {links && links.map((link, i) => {
-            return <button
-              key={i}
-              onClick={() => handleScrollTo(link.value, 'nav')}
-            >
-              {link.display}
-            </button>
-          })}
-        </span>
+        <div className={`links__container ${isMenuOpen ? 'links__container--open': 'links__container--closed'}`}>
+          <div className="links__buttons">
+            {links && links.map((link, i) => {
+              return <button
+                key={i}
+                onClick={() => handleScrollTo(link.value, 'nav')}
+              >
+                {link.display}
+              </button>
+            })}
+          </div>
+        </div>
 
         <span 
           onClick={toggleMenu} 

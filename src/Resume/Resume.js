@@ -124,7 +124,7 @@ const Resume = forwardRef((props, ref) => {
 
       <div className="resume__item">
         <h4>Education</h4>
-        <p><strong>University at Albany</strong> | SUNY, Albany, New York</p>
+        <p><strong>University at Albany | SUNY</strong> , Albany, New York</p>
         <p>BA Information Science, May 2008</p>
       </div>
       

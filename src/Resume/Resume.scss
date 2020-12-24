@@ -21,10 +21,13 @@
   button {
     background-color: transparent;
     color: var(--light-blue);
-    margin-left: 0.5em;
+    margin-left: 0.25em;
     font-size: 27px;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       color: var(--dark-blue);
