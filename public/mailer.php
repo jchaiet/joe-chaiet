@@ -32,7 +32,7 @@
     "content": [
       {
         "type": "text/plain",
-        "value": "'. $msg_content .'"
+        "value": "message is here"
       }  
     ]
   }');
