@@ -9,7 +9,7 @@
 
   if(empty($_POST['name']) && empty($_POST['email'])) die();
 
-  $msg_content = "Contact Request Submitted\n\nName: '.$name.'\nEmail: '.$email.'\nSubject: '.$subject.'\nMessage: '.$message.'";
+  $msg_content = "Contact Request Submitted\n\nName: ".$name."\nEmail: ".$email."\nSubject: ".$subject."\nMessage: ".$message;
 
   $request_body = json_decode('{
     "personalizations": [
