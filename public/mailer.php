@@ -9,10 +9,13 @@
 
   if(empty($_POST['name']) && empty($_POST['email'])) die();
 
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+
   $msg_content = "Contact Request Submitted\n\nName: ".$name."\nEmail: ".$email."\nSubject: ".$subject."\nMessage: ".$message;
 
-  echo $msg_content;
-/*
   $request_body = json_decode('{
     "personalizations": [
       {
@@ -30,7 +33,7 @@
     "content": [
       {
         "type": "text/plain",
-        "value": "'.json_encode($msg_content).'"
+        "value": '.$msg_content.'
       }  
     ]
   }');
@@ -42,5 +45,4 @@
   echo $response->statusCode();
   echo $response->body();
   echo $response->headers();
-  */
 ?>
