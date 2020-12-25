@@ -71,6 +71,10 @@ strong {
   font-family: 'Barlow-Bold';
 }
 
+button {
+  -webkit-appearance: none;
+}
+
 button:focus, input:focus, a:focus, textarea:focus {
   outline: none;
 }

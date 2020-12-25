@@ -9,11 +9,7 @@
 
   if(empty($_POST['name']) && empty($_POST['email'])) die();
 
-  $msg_content = '<h2>Contact Request Submitted</h2>
-  <h4>Name</h4><p>'.$name.'</p>
-  <h4>Email</h4><p>'.$email.'</p>
-  <h4>Subject</h4><p>'.$subject.'</p>
-  <h4>Message</h4><p>'.$message.'</p>';
+  $msg_content = "Contact Request Submitted\n\nName: '.$name.'\nEmail: '.$email.'\nSubject: '.$subject.'\nMessage: '.$message.'";
 
   $request_body = json_decode('{
     "personalizations": [
@@ -32,7 +28,7 @@
     "content": [
       {
         "type": "text/plain",
-        "value": "<h2>Contact Request Submitted<\/h2><h4>Name<\/h4><p>'.$name.'<\/p><h4>Email<\/h4><p>'.$email.'<\/p><h4>Subject<\/h4><p>'.$subject.'<\/p><h4>Message<\/h4><p>'.$message.'<\/p>"
+        "value": "'.$msg_content.'"
       }  
     ]
   }');
