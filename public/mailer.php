@@ -32,7 +32,7 @@
     "content": [
       {
         "type": "text/plain",
-        "value": "message is here"
+        "value": "<h2>Contact Request Submitted<\/h2><h4>Name<\/h4><p>'.$name.'<\/p><h4>Email<\/h4><p>'.$email.'<\/p><h4>Subject<\/h4><p>'.$subject.'<\/p><h4>Message<\/h4><p>'.$message.'<\/p>"
       }  
     ]
   }');
