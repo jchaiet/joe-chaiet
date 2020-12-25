@@ -11,6 +11,8 @@
 
   $msg_content = "Contact Request Submitted\n\nName: ".$name."\nEmail: ".$email."\nSubject: ".$subject."\nMessage: ".$message;
 
+  echo $msg_content;
+/*
   $request_body = json_decode('{
     "personalizations": [
       {
@@ -40,4 +42,5 @@
   echo $response->statusCode();
   echo $response->body();
   echo $response->headers();
+  */
 ?>
