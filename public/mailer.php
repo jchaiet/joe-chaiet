@@ -16,7 +16,7 @@
 
   $msg_content = "Contact Request Submitted\n\nName: ".$name."\nEmail: ".$email."\nSubject: ".$subject."\nMessage: ".$message;
 
-  $request_body = json_decode('{
+  /*$request_body = json_decode('{
     "personalizations": [
       {
         "to": [
@@ -36,13 +36,24 @@
         "value": '.$msg_content.'
       }  
     ]
-  }');
+  }');*/
+
+  $email = new \SendGrid\Mail\Mail();
+  $email->setFrom("joe@liquidpixelco.com", "Joe Chaiet");
+  $email->setSubject("New message from joechaiet.com");
+  $email->addTo("jchaiet@hotmail.com", "Joe Chaiet");
+  $email->addContent("text/plain", $msg_content);
 
   $apiKey = trim(getenv('SENDGRID_API_KEY'));
   $sg = new \SendGrid($apiKey);
 
-  $response = $sg->client->mail()->send()->post($request_body);
-  echo $response->statusCode();
-  echo $response->body();
-  echo $response->headers();
+  try {
+    $response = $sg->client->mail()->send()->post($email);
+    echo $response->statusCode();
+    echo $response->body();
+    echo $response->headers();
+  }catch(Exception $e){
+    echo 'Caught exception: ' $e->getMessage() ."\n";
+  }
+  
 ?>
