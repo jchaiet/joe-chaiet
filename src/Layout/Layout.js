@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 import Navigation from '../Navigation/Navigation';
 import Header from '../Header/Header';
@@ -16,6 +16,16 @@ const Layout = () => {
   const aboutRef = useRef();
   const projectsRef = useRef();
   const resumeRef = useRef();
+
+  useEffect(() => {
+    if(showContactModal){
+      document.body.style.overflowY = 'hidden';
+    }else{
+      document.body.style.overflowY = 'auto';
+    }
+    
+    return () => {}
+  }, [showContactModal]);
 
   const toggleContactModal = () => {
     setShowContactModal(!showContactModal);

@@ -70,7 +70,7 @@ export default function ContactModal(props) {
       }
     })
     .then(result => {
-      setEmailSent(result.data.sent);
+      setEmailSent(true);
       setName('');
       setEmail('');
       setSubject('');
