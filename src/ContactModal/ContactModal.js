@@ -9,6 +9,7 @@ import './ContactModal.scss';
 export default function ContactModal(props) {
   const { setShowContactModal, showContactModal } = props;
 
+  const [isSending, setIsSending] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -57,7 +58,7 @@ export default function ContactModal(props) {
 
   const handleSendEmail = event => {
     event.preventDefault();
-
+    setIsSending(true);
     axios({
       method: 'post',
       url: `${API_PATH}`,
@@ -75,6 +76,7 @@ export default function ContactModal(props) {
       setEmail('');
       setSubject('');
       setMessage('');
+      setIsSending(false);
 
       timerRef.current = setTimeout(() => {
         setEmailSent(false);
@@ -155,9 +157,10 @@ export default function ContactModal(props) {
               <input
                 type="submit"
                 className="btn btn--blue"
-                value="Send it"
-                disabled={!name || !email || !subject || !message}
+                value={isSending ? "Sending..." : "Send it"}
+                disabled={!name || !email || !subject || !message || isSending}
               />
+                      
             </form>
           </>
         }

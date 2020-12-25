@@ -28,7 +28,7 @@
     "content": [
       {
         "type": "text/plain",
-        "value": "'.$msg_content.'"
+        "value": "'.json_encode($msg_content).'"
       }  
     ]
   }');
