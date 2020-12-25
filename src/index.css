@@ -71,7 +71,7 @@ strong {
   font-family: 'Barlow-Bold';
 }
 
-button {
+button, input[type=submit] {
   -webkit-appearance: none;
 }
 
