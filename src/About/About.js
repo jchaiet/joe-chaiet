@@ -16,7 +16,7 @@ const About = forwardRef((props, ref) => {
         </div>
 
         <div className="about__right">
-          <p>Not me... That's Hopper (my assistant).</p>
+          <p>That's Hopper, my assistant (not me).</p>
           <img className="about__arrow" src={arrow} alt="Arrow" />
           <img className="about__hopper" src={hopper} alt="Hopper" />
         </div>
