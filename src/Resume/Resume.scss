@@ -1,4 +1,8 @@
 .resume__container {
+  background-color: #fff;
+}
+
+.resume__content {
   max-width: 600px;
   margin: 0 auto;
   padding: 1em;
@@ -6,7 +10,7 @@
   h4 {
     margin: 0;
     text-transform: uppercase;
-    color: var(--light-blue);
+    color: var(--blue);
   }
 
   p {
@@ -20,7 +24,7 @@
 
   button {
     background-color: transparent;
-    color: var(--light-blue);
+    color: var(--blue);
     margin-left: 0.25em;
     font-size: 27px;
     border: none;

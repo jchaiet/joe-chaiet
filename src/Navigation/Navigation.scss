@@ -34,6 +34,10 @@
   height: 50px;
 }
 
+.navigation__container--sticky {
+  background-color: var(--dark-blue) !important;
+}
+
 .navigation__links {
   display: flex;
 }
@@ -156,7 +160,7 @@
     height: 50px;
     transition: height 0.3s ease-in-out;
     padding: 0 1em;
-    background-color: var(--dark-blue);
+    background-color: transparent;
     z-index: 999;
     flex: 1;
   

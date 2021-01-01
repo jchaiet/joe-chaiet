@@ -1,11 +1,129 @@
 .about__container {
+  background-color: #fff;
+  padding: 0;
+}
+
+.about__content {
   max-width: 600px;
   margin: 0 auto;
   padding: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about__left {
+  flex: 0.75;
+  padding: 1em 0;
+}
+
+.about__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0.1;
+
+  p {
+    font-family: "VanillaBacked";
+    position: absolute;
+    right: -50px;
+    top: -15px;
+    z-index: 1;
+    font-size: 27px;
+    max-width: 190px;
+    line-height: 1.2;
+  }
+}
+ 
+img.about__arrow {
+  width: 85px;
+  position: absolute;
+  right: -65px;
+  bottom: 190px; 
+  transform: scaleX(-1) rotate(30deg);
+  z-index: 1;
+}
+
+img.about__hopper {
+  width: 255px;
+  position: absolute;
+  right: -120px;
+  bottom: 0;
 }
 
 @media screen and (min-width: 300px) {
   .about__container {
-    padding: 1em 2em;
+    padding: 0 2em;
+  }
+
+  .about__content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .about__right {
+    display: block;
+
+    p {
+      position: relative;
+      right: 110px;
+    }
+  }
+
+  img.about__arrow {
+    position: relative;
+    right: 65px;
+    bottom: 20px;
+    transform: scaleX(1) rotate(-30deg);
+  }
+
+  img.about__hopper {
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  img.about__hopper {
+    right: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__content {
+    flex-direction: row;
+    padding: 1em 0;
+  }
+
+  .about__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0.1;
+  
+    p {
+      position: absolute;
+      right: -40px;
+      top: -5px;
+      z-index: 1;
+    }
+  }
+   
+  img.about__arrow {
+    width: 85px;
+    position: absolute;
+    right: -55px;
+    bottom: 180px; 
+    transform: scaleX(-1) rotate(30deg);
+    z-index: 1;
+  }
+  
+  img.about__hopper {
+    width: 255px;
+    position: absolute;
+    right: -120px;
+    bottom: 0;
   }
 }

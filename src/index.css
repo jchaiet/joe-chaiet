@@ -9,6 +9,11 @@
   src: url("./assets/fonts/barlow/Barlow-Regular.otf") format("opentype"); 
 }
 
+@font-face {
+  font-family: "VanillaBacked";
+  src: url("./assets/fonts/vanilla_backed/VanillaBacked.ttf") format("opentype"); 
+}
+
 /* Color Variables */
 :root {
   --primary-color: #333333;
@@ -20,7 +25,7 @@
   --light-blue: #6eaec4;
   --light-grey: #dce3e6;
   
-  --blue: rgb(25, 68, 89); 
+  /*--blue: rgb(25, 68, 89);*/ 
   --red: rgb(239, 89, 57);
   --dark-red: rgb(186, 52, 22); 
   --green: rgb(17, 201, 59);

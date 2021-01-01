@@ -80,54 +80,55 @@ const Resume = forwardRef((props, ref) => {
 
   return (
     <div className="resume__container" ref={ref}>
-      <div className="resume__header">
-        <h2>Resume</h2>
-        <button>
-          <FiDownload />
-        </button>
-      </div>
+      <div className="resume__content">
+        <div className="resume__header">
+          <h2>Resume</h2>
+          <button>
+            <FiDownload />
+          </button>
+        </div>
 
-      <div className="resume__item resume__item--profile">
-        <h4>Profile</h4>
-        <p>Front-end developer with over nine years of experience building all aspects of the user experience and user interface for client-facing websites and applications. Proficient in JavaScript, HTML, CSS; plus modern libraries and frameworks. Motivated team player with a strong work ethic and background in project management. Organized, flexible, and able to meet deadlines in a fast-paced, collaborative environments.</p>
-      </div>
+        <div className="resume__item resume__item--profile">
+          <h4>Profile</h4>
+          <p>Front-end developer with over nine years of experience building all aspects of the user experience and user interface for client-facing websites and applications. Proficient in JavaScript, HTML, CSS; plus modern libraries and frameworks. Motivated team player with a strong work ethic and background in project management. Organized, flexible, and able to meet deadlines in a fast-paced, collaborative environments.</p>
+        </div>
 
-      <div className="resume__item resume__item--skills">
-        <h4>Technical Skills</h4>
-        <div className="resume__skills skills">
-          { skills.map((skill, i) => {
-            return (
-              <div key={i} className="skills__item item">
-                <p className="item__title">{skill.title}</p>
-                {skill.items.map((item, i) => <p key={i}>{item}</p>)}
-              </div>
-            )
-          })}
+        <div className="resume__item resume__item--skills">
+          <h4>Technical Skills</h4>
+          <div className="resume__skills skills">
+            { skills.map((skill, i) => {
+              return (
+                <div key={i} className="skills__item item">
+                  <p className="item__title">{skill.title}</p>
+                  {skill.items.map((item, i) => <p key={i}>{item}</p>)}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="resume__item resume__item--experience">
+          <h4>Experience</h4>
+          {experience && experience.map((ex, i) => (
+            <div className="experience__item" key={i}>
+              <p><strong>{ex.company}</strong>, {ex.position}, {ex.date}</p>
+              <p>{ex.description}</p>
+
+              <ul className="experience__list">
+                {ex.responsibilities.map((resp, i) => (
+                  <li key={i}>{resp}</li>
+                ))}
+              </ul>
+            </div>
+          ))} 
+        </div>
+
+        <div className="resume__item">
+          <h4>Education</h4>
+          <p><strong>University at Albany | SUNY</strong> , Albany, New York</p>
+          <p>BA Information Science, May 2008</p>
         </div>
       </div>
-
-      <div className="resume__item resume__item--experience">
-        <h4>Experience</h4>
-        {experience && experience.map((ex, i) => (
-          <div className="experience__item" key={i}>
-            <p><strong>{ex.company}</strong>, {ex.position}, {ex.date}</p>
-            <p>{ex.description}</p>
-
-            <ul className="experience__list">
-              {ex.responsibilities.map((resp, i) => (
-                <li key={i}>{resp}</li>
-              ))}
-            </ul>
-          </div>
-        ))} 
-      </div>
-
-      <div className="resume__item">
-        <h4>Education</h4>
-        <p><strong>University at Albany | SUNY</strong> , Albany, New York</p>
-        <p>BA Information Science, May 2008</p>
-      </div>
-      
     </div>
   )
 });
