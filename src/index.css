@@ -61,6 +61,7 @@ body {
   font-size: 1.1rem;
   margin: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 
 #root, .container {

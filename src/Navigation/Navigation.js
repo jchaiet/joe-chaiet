@@ -55,6 +55,7 @@ const Navigation = (props) => {
           <div className="links__buttons">
             {links && links.map((link, i) => {
               return <button
+                className={link.value === 'contact' ? 'btn--contact' : ''}
                 key={i}
                 onClick={() => handleScrollTo(link.value, 'nav')}
               >

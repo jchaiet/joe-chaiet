@@ -51,6 +51,16 @@
   display: flex;
   justify-content: space-between;
 
+  .btn--contact {
+    border: 2px solid #fff;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #fff;
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+
   button {
     background-color: transparent;
     color: var(--white);
@@ -58,7 +68,7 @@
     font-family: inherit;
     border: none;
     cursor: pointer;
-
+    height: 35px;
     &:hover {
       color: var(--light-blue)
     }
@@ -200,6 +210,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 50px;
     visibility: visible;
 

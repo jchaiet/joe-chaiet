@@ -47,7 +47,7 @@ img.about__arrow {
 }
 
 img.about__hopper {
-  width: 255px;
+  width: 225px;
   position: absolute;
   right: -120px;
   bottom: 0;
@@ -68,25 +68,26 @@ img.about__hopper {
 
     p {
       position: relative;
-      right: 110px;
+      right: 70px;
     }
   }
 
   img.about__arrow {
     position: relative;
-    right: 65px;
+    right: 50px;
     bottom: 20px;
     transform: scaleX(1) rotate(-30deg);
   }
 
   img.about__hopper {
-    right: 0;
+    right: -10%;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   img.about__hopper {
-    right: 60px;
+    width: 225px;
+    right: 10%;
   }
 }
 
