@@ -31,11 +31,32 @@
   left: 0;
   right: 0;
   //animation: moveDown 0.3s ease-in-out;  
-  height: 50px;
+  height: 75px;
 }
 
 .navigation__container--sticky {
+  height: 50px;
   background-color: var(--dark-blue) !important;
+
+  .links__container--open {
+    top: 50px;
+
+    button {
+      height: 60px;
+      padding: 0.5em 1em;
+      color: #fff;
+    }
+  
+    .btn--contact {
+      border: 2px solid #fff;
+      border-radius: 5px;
+      
+      &:hover {
+        background-color: #fff;
+        transition: background-color 0.2s ease-in-out;
+      }
+    }
+  }
 }
 
 .navigation__links {
@@ -50,6 +71,12 @@
   flex: 0.4;
   display: flex;
   justify-content: space-between;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .btn--contact {
     border: 2px solid #fff;
@@ -69,6 +96,10 @@
     border: none;
     cursor: pointer;
     height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &:hover {
       color: var(--light-blue)
     }
@@ -95,6 +126,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    background-color: transparent;
   }
 
   .navigation__toggle {
@@ -121,10 +153,10 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    top: 50px;
+    top: 75px;
     left: 0;
     position: absolute;
-    background-color: var(--light-grey);
+    background-color: var(--dark-blue);
     visibility: visible;
     z-index: 9999;
     height: calc(100vh - 50px);
@@ -144,8 +176,9 @@
 
     button {
       margin: 1em auto;
-      color: var(--light-blue);
       font-size: 27px;
+      height: 60px;
+      padding: 0.5em 1em;
     }
   }
 
@@ -221,7 +254,7 @@
       font-family: inherit;
       border: none;
       cursor: pointer;
-  
+     
       &:hover {
         color: var(--light-blue)
       }
