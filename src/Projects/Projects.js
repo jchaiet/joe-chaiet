@@ -30,7 +30,7 @@ const Projects = forwardRef((props, ref) => {
   const projects = [
     {
       name: 'Noma', 
-      desc: 'Noma is a rental management application.', 
+      desc: 'Noma is a rental management application. Demo app coming soon.', 
       images: [noma_1, noma_2, noma_3, noma_4], 
       stack: ['react', 'nodejs', 'firebase'], 
       github: null, 

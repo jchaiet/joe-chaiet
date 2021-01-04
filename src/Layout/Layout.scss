@@ -18,13 +18,13 @@
   &.showModal{
     visibility: visible;
     opacity: 1;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
 
   &.hideModal{
     visibility: hidden;
     opacity: 0;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
 }
 
@@ -52,7 +52,7 @@
   flex-direction: column;
 
   min-width: 400px;
-  transition: transform 200ms ease-in-out;
+  transition: transform 300ms ease-in-out;
   transform: translateY(-300px);
 
   &.slideIn {
