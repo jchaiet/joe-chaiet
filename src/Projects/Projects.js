@@ -63,17 +63,17 @@ const Projects = forwardRef((props, ref) => {
   function getIcon(item, i){
     switch(item) {
       case 'react':
-        return <span className="tooltip" key={i}><SiReact /><span className="tooltip__content">React</span></span>;
+        return <><SiReact /><span className="tooltip__content">React</span></>;
       case 'socketio':
-        return <span className="tooltip" key={i}><SiSocketDotIo /> <span className="tooltip__content">Socket.io</span></span>;
+        return <><SiSocketDotIo /> <span className="tooltip__content">Socket.io</span></>;
       case 'firebase':
-        return <span className="tooltip" key={i}><SiFirebase /> <span className="tooltip__content">Firebase</span></span>;
+        return <><SiFirebase /> <span className="tooltip__content">Firebase</span></>;
       case 'nodejs':
-        return <span className="tooltip" key={i}><SiNodeDotJs /> <span className="tooltip__content">Node.js</span></span>;
+        return <><SiNodeDotJs /> <span className="tooltip__content">Node.js</span></>;
       case 'php':
-        return <span className="tooltip" key={i}><SiPhp /> <span className="tooltip__content">PHP</span></span>;
+        return <><SiPhp /> <span className="tooltip__content">PHP</span></>;
       case 'javascript':
-        return <span className="tooltip" key={i}><SiJavascript /> <span className="tooltip__content">JavaScript</span></span>;
+        return <><SiJavascript /> <span className="tooltip__content">JavaScript</span></>;
       default :
         return null;
     }
@@ -96,7 +96,7 @@ const Projects = forwardRef((props, ref) => {
                   <span className="separator">|</span>
 
                   {project.stack.length > 0 && project.stack.map((item, i) => {
-                    return getIcon(item, i);
+                    return <span className="tooltip" key={i}>{getIcon(item, i)}</span>
                   })}
 
                 </div>
@@ -105,9 +105,7 @@ const Projects = forwardRef((props, ref) => {
 
                 <div className="list__image-container">
                   { project.images.map((image, i) => (
-                    <>
-                      <img key={i} src={image} alt="project"/>
-                    </>
+                    <img key={i} src={image} alt="project"/>
                   ))}
                 </div>
               </div>
