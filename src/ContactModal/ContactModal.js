@@ -91,7 +91,7 @@ export default function ContactModal(props) {
   return (
     <div className="modal modal--contact">
       <div className="modal__header modal__header--contact">
-        <h3>Contact Me</h3>
+        <h3>Get in touch!</h3>
         <button onClick={() => setShowContactModal(false)} >
           <FiX />
         </button>
@@ -157,7 +157,7 @@ export default function ContactModal(props) {
               <input
                 type="submit"
                 className="btn btn--blue"
-                value={isSending ? "Sending..." : "Send it"}
+                value={isSending ? "Sending..." : "Send Message"}
                 disabled={!name || !email || !subject || !message || isSending}
               />
                       

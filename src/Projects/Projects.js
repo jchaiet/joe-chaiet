@@ -25,6 +25,8 @@ import {
 import './Projects.scss';
 
 const Projects = forwardRef((props, ref) => {
+  const { handleShowImagesModal } = props;
+
   const projects = [
     {
       name: 'Noma', 
@@ -105,7 +107,7 @@ const Projects = forwardRef((props, ref) => {
 
                 <div className="list__image-container">
                   { project.images.map((image, i) => (
-                    <img key={i} src={image} alt="project"/>
+                    <img key={i} src={image} alt="project" onClick={() => handleShowImagesModal(image)} />
                   ))}
                 </div>
               </div>

@@ -28,18 +28,30 @@
   }
 }
 
+.popup__container--images {
+  background-color: transparent;
+  max-width: 90%;
+
+  div button {
+    background-color: transparent;
+  }
+}
+
+.popup__container--contact {
+  background-color: #F0F0F0;
+  max-width: 400px;
+}
+
 .popup__container {
   position: absolute;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #F0F0F0;
   border-radius: 15px;
   max-height: 85%;
   overflow-y: auto;
   flex-direction: column;
 
   min-width: 400px;
-  max-width: 400px;
   transition: transform 200ms ease-in-out;
   transform: translateY(-300px);
 
