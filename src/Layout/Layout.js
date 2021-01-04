@@ -15,6 +15,7 @@ const Layout = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showImagesModal, setShowImagesModal] = useState(false);
   const [image, setImage] = useState();
+
   const aboutRef = useRef();
   const projectsRef = useRef();
   const resumeRef = useRef();
@@ -69,6 +70,7 @@ const Layout = () => {
     <div className="layout__container" id="layout">
       <Navigation 
         handleScrollTo={(link, from) => handleScrollTo(link, from)} 
+        showContactModal={showContactModal}
       />
 
       <div className={`popup  ${showContactModal ? 'showModal' : 'hideModal'}`}>

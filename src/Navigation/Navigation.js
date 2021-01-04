@@ -5,7 +5,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import './Navigation.scss';
 
 const Navigation = (props) => {
-  const { handleScrollTo } = props;
+  const { handleScrollTo, showContactModal } = props;
   const links = [
     {display: 'About', value: 'about'},
     {display: 'Projects', value: 'projects'},
@@ -15,6 +15,13 @@ const Navigation = (props) => {
 
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if(showContactModal) {
+      setIsMenuOpen(false);
+    }
+    return () => {}
+  }, [showContactModal])
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
