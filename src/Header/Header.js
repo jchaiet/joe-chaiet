@@ -54,11 +54,11 @@ export default function Header(props) {
     <div className="header__container">
       <div className="header__content">
         <div className="header__intro">
-          <h1 className="header__typed-element" id="typedElementIntro"></h1>
+          <span className="header__typed-element" id="typedElementIntro"></span>
         </div>
 
         <div className="header__intro">
-          <h1 className="header__typed-element" id="typedElementDesc"></h1>
+          <span className="header__typed-element" id="typedElementDesc"></span>
         </div>
 
         <div className={"header__btn btn " + (showButton ? 'btn--show' : 'btn--hide')}>
