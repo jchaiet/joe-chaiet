@@ -1,6 +1,8 @@
 import React, { forwardRef } from 'react';
 import { FiDownload } from 'react-icons/fi';
 
+import pdf from '../assets/pdf/Resume_Joe-Chaiet.pdf';
+
 import './Resume.scss';
 
 const Resume = forwardRef((props, ref) => {
@@ -48,6 +50,7 @@ const Resume = forwardRef((props, ref) => {
       title: "Storage",
       items: [
         "Firebase",
+        "MongoDB",
         "MySQL"
       ]
     }
@@ -60,7 +63,7 @@ const Resume = forwardRef((props, ref) => {
       date: "Apr 2013 - present",
       description: "Boldheart is a business and life coach to help individuals reach their potential in their careers and lives.",
       responsibilities: [
-        "Slashed project lead times by 23% by facilitating the standardization of web development projects with a responsive, mobile-first approach with an emphasis on front-end features and cross-browser compatibility",
+        "Slashed project lead times by 28% by facilitating the standardization of web development projects with a responsive, mobile-first approach with an emphasis on front-end features and cross-browser compatibility",
         "Spearheaded end-to-end development and deployment of client-facing learning management system, producing a dynamic user experience for over 300 users, increasing client retention by 37%",
         "Designed and developed and deployed a sales application used by in-house sales staff, resulting in a more modular system, streamlining the client acquisition process and reducing sales-related overhead costs by 34%",
         "Integrating third-party services and external APIs to consolidate critical data and improve user experience",
@@ -83,9 +86,9 @@ const Resume = forwardRef((props, ref) => {
       <div className="resume__content">
         <div className="resume__header">
           <h2>Resume</h2>
-          <button>
+          <a target="_blank" href={pdf}>
             <FiDownload />
-          </button>
+          </a>
         </div>
 
         <div className="resume__item resume__item--profile">
