@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b82d1b28.chunk.css",
+    "main.js": "/static/js/main.f207aa49.chunk.js",
+    "main.js.map": "/static/js/main.f207aa49.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b5385959.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b5385959.js.map",
+    "static/js/2.9bf4d84a.chunk.js": "/static/js/2.9bf4d84a.chunk.js",
+    "static/js/2.9bf4d84a.chunk.js.map": "/static/js/2.9bf4d84a.chunk.js.map",
+    "static/js/3.ee302c05.chunk.js": "/static/js/3.ee302c05.chunk.js",
+    "static/js/3.ee302c05.chunk.js.map": "/static/js/3.ee302c05.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b82d1b28.chunk.css.map": "/static/css/main.b82d1b28.chunk.css.map",
+    "static/js/2.9bf4d84a.chunk.js.LICENSE.txt": "/static/js/2.9bf4d84a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/VanillaBacked.ba0f6653.ttf",
+    "static/media/Resume_Joe-Chaiet.c004df42.pdf": "/static/media/Resume_Joe-Chaiet.c004df42.pdf",
+    "static/media/arrow.c529585f.png": "/static/media/arrow.c529585f.png",
+    "static/media/Header.scss": "/static/media/bg-palms-original.0a19d718.jpg",
+    "static/media/blackjack-1.9f56772a.png": "/static/media/blackjack-1.9f56772a.png",
+    "static/media/blackjack-2.3f5b4f23.png": "/static/media/blackjack-2.3f5b4f23.png",
+    "static/media/blackjack-3.638f9ac6.png": "/static/media/blackjack-3.638f9ac6.png",
+    "static/media/blackjack-4.b93b64ed.png": "/static/media/blackjack-4.b93b64ed.png",
+    "static/media/chatter-1.a5237a48.png": "/static/media/chatter-1.a5237a48.png",
+    "static/media/chatter-2.f106db11.png": "/static/media/chatter-2.f106db11.png",
+    "static/media/hopper.f1d3780f.jpg": "/static/media/hopper.f1d3780f.jpg",
+    "static/media/joechaiet-1.cbe88b9c.png": "/static/media/joechaiet-1.cbe88b9c.png",
+    "static/media/noma-1.9d2340fc.png": "/static/media/noma-1.9d2340fc.png",
+    "static/media/noma-2.eb84dfaa.png": "/static/media/noma-2.eb84dfaa.png",
+    "static/media/noma-3.0e0d103d.png": "/static/media/noma-3.0e0d103d.png",
+    "static/media/noma-4.4d203f2f.png": "/static/media/noma-4.4d203f2f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5385959.js",
+    "static/js/2.9bf4d84a.chunk.js",
+    "static/css/main.b82d1b28.chunk.css",
+    "static/js/main.f207aa49.chunk.js"
+  ]
+}

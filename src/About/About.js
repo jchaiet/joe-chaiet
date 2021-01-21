@@ -12,7 +12,7 @@ const About = forwardRef((props, ref) => {
           <h2>About me</h2>
           <p>Hi, again, I'm still Joe. As a web developer, I love bringing ideas to life on-screen (large or small). I'd say I'm a pretty curious person - I like to figure out how things work and find solutions to problems through code.</p>
 
-          <p>You'll usually find me coding things from scratch, reading articles about up and coming technologies and tools, or just working on improving my skillset. To me, web &amp; app development is way to help make people's lives easier.</p>
+          <p>You'll usually find me coding things from scratch, reading articles about up and coming technologies and tools, or just working on improving my skillset. To me, web &amp; app development is a way to help make people's lives easier.</p>
         </div>
 
         <div className="about__right">
