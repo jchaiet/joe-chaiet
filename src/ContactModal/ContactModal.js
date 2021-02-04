@@ -8,7 +8,7 @@ import './ContactModal.scss';
 
 export default function ContactModal(props) {
   const { setShowContactModal, showContactModal } = props;
-
+  
   const [isSending, setIsSending] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
