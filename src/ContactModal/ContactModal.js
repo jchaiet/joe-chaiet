@@ -19,7 +19,7 @@ export default function ContactModal(props) {
   
   const timerRef = useRef();
 
-  const API_PATH = "https://joechaiet.com/mailer.php";
+  const API_PATH = "https://joe-chaiet.herokuapp.com/mailer.php";
 
   useEffect(() => {
     setName('');
